@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 根节点 -->
+    <div id="root">
+
+    </div>
+    <!-- 引入依赖包 -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- crossorigin   跨脚本的错误提示 -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        // 创建react根节点
+        const root = ReactDOM.createRoot(document.querySelector('div'));
+        let msg = 'hello word';
+        function btnClick() {
+            msg = 'hello rect'
+        }
+        root.render(
+            <div>
+                <h1 > {msg} </h1>
+                <button onClick={btnClick}>切换</button>
+            </div>
+        )
+    </script>
+</body>
+
+</html>
